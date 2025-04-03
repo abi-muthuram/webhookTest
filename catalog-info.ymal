@@ -1,0 +1,51 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: SeatAvailability
+  description: Microservice for SeatAvailability
+  appid: SeatAvailability
+  tags:
+    - java
+    - springboot
+  annotations:
+    lob: skygrade-demo
+    flowsource/lob: skygrade-demo
+    flowsource/is-critical: "true"
+    flowsource/cloud-provider: aws
+    flowsource/app-hosted-region: us-east-1
+        
+    # Tools for DORA metrics
+    flowsource/dora-cicd-tool: azure-pipelines
+    flowsource/dora-scm-tool: azure-repos
+    flowsource/dora-alm-tool: azure-boards
+    flowsource/dora-itsm-tool: service-now
+    flowsource/dora-observability-platform: datadog
+
+    # 
+    flowsource/azure-project-repo: SeatAvailability/SeatAvailability
+    flowsource/azure-project: SeatAvailability
+    flowsource/checkmarx-project-id: SeatAvailability
+    flowsource/github-repo-owner: TheCognizantFoundry
+    flowsource/github-repo-name: SeatAvailability
+    flowsource/azure-devops-project-key: SeatAvailability
+    flowsource/datadog-tags: env!engg
+    flowsource/jenkins-pipelines: TicketBookingPipeline(MultiBranch),TicketBooking(Freestyle Project),Seatavailability-Test2
+    flowsource/durationInDays: '120'
+    #flowsource/github-workflows: Java CI with Maven
+    # flowsource/jenkins-pipelines: SeatAvailability-pipeline
+    # flowsource/jenkins-pipelines: TestCiCdTemplates,ticket-booking-application,Ticket-Booking-deployment,TicketBooking-pipeline-cicd-test-pipeline,MoviesAppMigration,CiCdDemo,DA-demo,DemoInstance1,demoInstanceRead
+    
+    # flowsource/backstage.io/techdocs-ref: dir:.
+
+    #datadoghq.com/dashboard-url: https://p.us3.datadoghq.com/sb/266d06c0-b67d-11ed-8570-da7ad0900003-478bd28bc9cc23838a058f0286890b9b
+    #github.com/project-slug: 'TheCognizantFoundry/SeatAvailability'
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: SeatAvailability/SeatAvailability
+    dev.azure.com/project: SeatAvailability
+    cognizant/checkmarx-project-id: SeatAvailability
+    cognizant/github-repo-owner: TheCognizantFoundry
+    cognizant/github-repo-name: SeatAvailability
+    cognizant/azure-devops-project-key: SeatAvailability
+    cognizant/sonarqube-project-key: seat_availability
+    backstage.io/kubernetes-id: ci
+    backstage.io/kubernetes-cluster-dev: Skygrade-Flowsource-EKS
